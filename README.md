@@ -1,40 +1,42 @@
 # Protein-Sequence-Clustering
-Protein Sequence Clustering with ProtBert
-Overview
 
-This is a practice project on protein sequence analysis. It uses ProtBert embeddings to represent protein sequences, then applies PCA, t-SNE, and K-means clustering to visualize and group similar proteins.
+This is my ** bioinformatics project** where I explored clustering protein sequences using embeddings from **ProtBERT** and **ESM2**.
 
-Features
+---
 
-Read protein sequences from a FASTA file
+## Dataset
 
-Convert sequences into ProtBert embeddings
+* 305 protein sequences in FASTA format
+* Families: Hemoglobin, Lysozyme, Kinase, Unknown
 
-Reduce dimensions with PCA and t-SNE
+---
 
-Cluster proteins using K-means
+## What I did
 
-Visualize clusters and compare with true protein families
+1. Converted protein sequences into embeddings (ProtBERT / ESM2)
+2. Visualized embeddings with PCA and t-SNE
+3. Clustered sequences using K-Means
+4. Compared clusters with true families (for evaluation only)
 
-Requirements
-pip install biopython transformers torch scikit-learn pandas numpy matplotlib seaborn
+---
 
-How to Run
+## Results
 
-Place your protein sequences in proteinSequences.fasta
+* **ProtBERT:** ~41% clustering accuracy, clusters overlap
+* **ESM2:** ~80% clustering accuracy, much better separation
 
-Open the notebook Protein_Sequence_Clustering_ProtBert.ipynb
+---
 
-Run all cells to see embeddings, clustering, and plots
+## Learnings
 
-Results
+* How protein embeddings work
+* Difference between PCA and t-SNE
+* Basic unsupervised clustering and evaluation
 
-Some protein families (e.g., Lysozyme) cluster well
+---
 
-Others (e.g., Kinase) are mixed
+## Files
 
-Accuracy without ‘Other’ family: ~48%
-
-Notes
-
-This is a practice project to learn protein embeddings, visualization, and unsupervised clustering.
+* `Protein_Sequence_Clustering_ProtBert.ipynb` – ProtBERT embeddings
+* `Protein Sequence Clustering using ESM2 Embeddings.ipynb` – ESM2 embeddings
+* `proteinSequences.fasta` – input sequences
